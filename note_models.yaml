@@ -1,0 +1,514 @@
+inote_models:
+  - name: "MultipleChoiceCard"
+    fields:
+      - name: "Question"
+      - name: "Option1"
+      - name: "Option2"
+      - name: "Option3"
+      - name: "Option4"
+      - name: "CorrectAnswer"
+    templates:
+      - name: "Multiple Choice"
+        qfmt: |
+          <style>
+            #mcq-container {
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+            }
+
+            .mcq-option {
+              padding: 10px 15px;
+              margin: 5px 0;
+              background-color: #f9f9f9;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+
+            .mcq-option:hover {
+              background-color: #e6f7ff;
+            }
+
+            .mcq-option.selected {
+              background-color: #d1e7dd;
+              border: 2px solid #0d6efd;
+            }
+
+            #feedback {
+              margin-top: 10px;
+              font-weight: bold;
+            }
+
+            #check-answer-btn {
+              margin-top: 10px;
+              padding: 10px;
+              background-color: #0d6efd;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+
+            #check-answer-btn:hover {
+              background-color: #0b5ed7;
+            }
+          </style>
+
+          <div id="mcq-container">
+            <h3>{{Question}}</h3>
+            <div class="mcq-option" data-option="1" onclick="selectOption(this)">{{Option1}}</div>
+            <div class="mcq-option" data-option="2" onclick="selectOption(this)">{{Option2}}</div>
+            <div class="mcq-option" data-option="3" onclick="selectOption(this)">{{Option3}}</div>
+            <div class="mcq-option" data-option="4" onclick="selectOption(this)">{{Option4}}</div>
+          </div>
+          <button id="check-answer-btn" onclick="checkMCQ()">Check Answer</button>
+          <div id="feedback"></div>
+
+          <script>
+            let selectedOption = null;
+
+            function selectOption(element) {
+              document.querySelectorAll('.mcq-option').forEach(opt => opt.classList.remove('selected'));
+              element.classList.add('selected');
+              selectedOption = element.getAttribute('data-option');
+            }
+
+            function checkMCQ() {
+              const correctAnswer = "{{CorrectAnswer}}";
+              const feedback = document.getElementById('feedback');
+              const selectedText = selectedOption ? document.querySelector('.mcq-option.selected').textContent.trim() : null;
+
+              if (selectedOption && selectedText === correctAnswer.trim()) {
+                feedback.textContent = "Correct!";
+                feedback.style.color = "green";
+              } else {
+                feedback.textContent = "Incorrect. The correct answer is: " + correctAnswer;
+                feedback.style.color = "red";
+              }
+            }
+          </script>
+        afmt: |
+          <b>Correct Answer:</b> {{CorrectAnswer}}
+
+  - name: "TrueFalseCard"
+    fields:
+      - name: "Statement"
+      - name: "CorrectAnswer"
+      - name: "Explanation"
+    templates:
+      - name: "True/False Question"
+        qfmt: |
+          <style>
+            #tf-container {
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+            }
+
+            .tf-option {
+              padding: 10px 15px;
+              margin: 5px 0;
+              background-color: #f9f9f9;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+
+            .tf-option:hover {
+              background-color: #e6f7ff;
+            }
+
+            .tf-option.selected {
+              background-color: #d1e7dd;
+              border: 2px solid #0d6efd;
+            }
+
+            #feedback {
+              margin-top: 10px;
+              font-weight: bold;
+            }
+
+            #check-answer-btn {
+              margin-top: 10px;
+              padding: 10px;
+              background-color: #0d6efd;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+
+            #check-answer-btn:hover {
+              background-color: #0b5ed7;
+            }
+          </style>
+
+          <div id="tf-container">
+            <h3>True or False:</h3>
+            <div>{{Statement}}</div>
+            <div class="tf-option" data-option="True" onclick="selectTF(this)">True</div>
+            <div class="tf-option" data-option="False" onclick="selectTF(this)">False</div>
+          </div>
+          <button id="check-answer-btn" onclick="checkTF()">Check Answer</button>
+          <div id="feedback"></div>
+
+          <script>
+            let selectedTF = null;
+
+            function selectTF(element) {
+              document.querySelectorAll('.tf-option').forEach(opt => opt.classList.remove('selected'));
+              element.classList.add('selected');
+              selectedTF = element.getAttribute('data-option');
+            }
+
+            function checkTF() {
+              const correctAnswer = "{{CorrectAnswer}}";
+              const feedback = document.getElementById('feedback');
+              if (selectedTF === correctAnswer) {
+                feedback.textContent = "Correct!";
+                feedback.style.color = "green";
+              } else {
+                feedback.textContent = "Incorrect. The correct answer is: " + correctAnswer;
+                feedback.style.color = "red";
+              }
+            }
+          </script>
+        afmt: |
+          <b>Correct Answer:</b> {{CorrectAnswer}}<br>{{Explanation}}
+
+  - name: "MatchingCard"
+    fields:
+      - name: "Concept1"
+      - name: "Concept2"
+      - name: "Concept3"
+      - name: "Concept4"
+      - name: "Definition1"
+      - name: "Definition2"
+      - name: "Definition3"
+      - name: "Definition4"
+    templates:
+      - name: "Matching Question"
+        qfmt: |
+          <style>
+            #matching-container {
+              display: flex;
+              justify-content: space-around;
+              padding: 20px;
+            }
+
+            .drag-item {
+              padding: 10px 15px;
+              margin: 5px;
+              background-color: #f0f8ff;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              cursor: grab;
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+              transition: transform 0.2s;
+            }
+            .drag-item:hover {
+              transform: scale(1.05);
+            }
+
+            .drop-zone {
+              padding: 15px;
+              margin: 5px;
+              background-color: #f9f9f9;
+              border: 2px dashed #aaa;
+              border-radius: 8px;
+              min-height: 40px;
+              min-width: 200px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: background-color 0.3s;
+            }
+            .drop-zone.over {
+              background-color: #e0ffe0;
+              border: 2px solid #32cd32;
+            }
+
+            .drop-zone-container {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+            }
+
+            .hidden { 
+              visibility: hidden;
+            }
+          </style>
+
+          <div id="matching-container">
+            <div id="concepts" class="drop-zone-container" style="flex: 1;">
+              <h3>Concepts</h3>
+              <div class="drag-item" draggable="true" id="item1">{{Concept1}}</div>
+              <div class="drag-item" draggable="true" id="item2">{{Concept2}}</div>
+              <div class="drag-item" draggable="true" id="item3">{{Concept3}}</div>
+              <div class="drag-item" draggable="true" id="item4">{{Concept4}}</div>
+            </div>
+
+            <div id="definitions" style="flex: 1;">
+              <h3>Definitions</h3>
+              <div class="drop-zone-container">
+                <div class="drop-zone" data-expected="item1" data-original-text="{{Definition1}}">Drop here: {{Definition1}}</div>
+                <div class="drop-zone" data-expected="item2" data-original-text="{{Definition2}}">Drop here: {{Definition2}}</div>
+                <div class="drop-zone" data-expected="item3" data-original-text="{{Definition3}}">Drop here: {{Definition3}}</div>
+                <div class="drop-zone" data-expected="item4" data-original-text="{{Definition4}}">Drop here: {{Definition4}}</div>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="checkMatch()">Check Answers</button>
+          <button onclick="resetMatch()">Reset</button>
+          <div id="feedback" style="margin-top: 10px;"></div>
+
+          <script>
+            document.querySelectorAll('.drag-item').forEach(item => {
+              item.addEventListener('dragstart', event => {
+                event.dataTransfer.setData('text', event.target.id);
+              });
+            });
+
+            document.querySelectorAll('.drop-zone').forEach(zone => {
+              zone.addEventListener('dragover', event => {
+                event.preventDefault();
+                zone.classList.add('over');
+              });
+
+              zone.addEventListener('dragleave', event => {
+                zone.classList.remove('over');
+              });
+
+              zone.addEventListener('drop', event => {
+                event.preventDefault();
+                zone.classList.remove('over');
+                const draggedId = event.dataTransfer.getData('text');
+                const draggedElement = document.getElementById(draggedId);
+
+                if (draggedElement) {
+                  if (zone.querySelector('.drag-item')) {
+                    document.getElementById('concepts').appendChild(zone.querySelector('.drag-item'));
+                  }
+
+                  zone.textContent = '';
+                  zone.appendChild(draggedElement);
+                  zone.setAttribute('data-matched', draggedId);
+                }
+              });
+            });
+
+            document.getElementById('concepts').addEventListener('dragover', event => {
+              event.preventDefault();
+            });
+
+            document.getElementById('concepts').addEventListener('drop', event => {
+              event.preventDefault();
+              const draggedId = event.dataTransfer.getData('text');
+              const draggedElement = document.getElementById(draggedId);
+
+              if (draggedElement) {
+                if (draggedElement.parentElement.classList.contains('drop-zone')) {
+                  draggedElement.parentElement.removeAttribute('data-matched');
+                  draggedElement.parentElement.textContent = "Drop here: " + draggedElement.parentElement.getAttribute('data-original-text');
+                }
+
+                document.getElementById('concepts').appendChild(draggedElement);
+              }
+            });
+
+            function checkMatch() {
+              let correct = true;
+              document.querySelectorAll('.drop-zone').forEach(zone => {
+                if (zone.getAttribute('data-expected') !== zone.getAttribute('data-matched')) {
+                  zone.style.border = '2px solid red';
+                  correct = false;
+                } else {
+                  zone.style.border = '2px solid green';
+                }
+              });
+
+              const feedback = document.getElementById('feedback');
+              feedback.style.fontWeight = 'bold';
+              feedback.textContent = correct ? "Great job! All matches are correct!" : "Some matches are incorrect. Try again!";
+              feedback.style.color = correct ? "green" : "red";
+            }
+
+            function resetMatch() {
+              document.querySelectorAll('.drop-zone').forEach(zone => {
+                if (zone.querySelector('.drag-item')) {
+                  document.getElementById('concepts').appendChild(zone.querySelector('.drag-item'));
+                }
+
+                zone.textContent = "Drop here: " + zone.getAttribute('data-original-text');
+                zone.removeAttribute('data-matched');
+                zone.style.border = '2px dashed #aaa';
+              });
+              
+              const feedback = document.getElementById('feedback');
+              feedback.textContent = "";
+            }
+          </script>
+        afmt: |
+          <b>Correct Answers:</b><br>
+          1. {{Concept1}} - {{Definition1}}<br>
+          2. {{Concept2}} - {{Definition2}}<br>
+          3. {{Concept3}} - {{Definition3}}<br>
+          4. {{Concept4}} - {{Definition4}}
+
+  - name: "FillInTheBlankCard"
+    fields:
+      - name: "SentenceWithBlank"
+      - name: "CorrectAnswer"
+      - name: "Hint"
+    templates:
+      - name: "Fill in the Blank"
+        qfmt: |
+          <style>
+            #fib-container {
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+            }
+
+            #answer-input {
+              padding: 10px;
+              margin: 5px 0;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              width: 80%;
+            }
+
+            #feedback {
+              margin-top: 10px;
+              font-weight: bold;
+            }
+
+            #check-answer-btn {
+              margin-top: 10px;
+              padding: 10px;
+              background-color: #0d6efd;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+
+            #check-answer-btn:hover {
+              background-color: #0b5ed7;
+            }
+          </style>
+
+          <div id="fib-container">
+            <h3>Complete the sentence:</h3>
+            <div>{{SentenceWithBlank}}</div>
+            <input type="text" id="answer-input" placeholder="Type your answer here" />
+            <button id="check-answer-btn" onclick="checkFIB()">Check Answer</button>
+            <div id="hint">Hint: {{Hint}}</div>
+            <div id="feedback"></div>
+          </div>
+
+          <script>
+            function checkFIB() {
+              const userAnswer = document.getElementById("answer-input").value.trim().toLowerCase();
+              const correctAnswer = "{{CorrectAnswer}}".trim().toLowerCase();
+              const feedback = document.getElementById('feedback');
+              if (userAnswer === correctAnswer) {
+                feedback.textContent = "Correct!";
+                feedback.style.color = "green";
+              } else {
+                feedback.textContent = "Incorrect. The correct answer is: " + "{{CorrectAnswer}}";
+                feedback.style.color = "red";
+              }
+            }
+          </script>
+        afmt: |
+          <b>Correct Answer:</b> {{CorrectAnswer}}  
+
+  - name: "ScenarioCard"
+    fields:
+      - name: "Scenario"
+      - name: "Question"
+      - name: "CorrectAnswer"
+    templates:
+      - name: "Scenario-Based Challenge"
+        qfmt: |
+          <style>
+            #scenario-container {
+              display: flex;
+              flex-direction: column;
+              padding: 20px;
+            }
+
+            #scenario-text {
+              background-color: #f9f9f9;
+              padding: 15px;
+              margin-bottom: 15px;
+              border-left: 4px solid #0d6efd;
+              border-radius: 4px;
+            }
+
+            #scenario-answer-input {
+              padding: 10px;
+              margin: 5px 0;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              width: 80%;
+            }
+
+            #feedback {
+              margin-top: 10px;
+              font-weight: bold;
+            }
+
+            #check-answer-btn {
+              margin-top: 10px;
+              padding: 10px;
+              background-color: #0d6efd;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+
+            #check-answer-btn:hover {
+              background-color: #0b5ed7;
+            }
+          </style>
+
+          <div id="scenario-container">
+            <div id="scenario-text">
+              <h3>Scenario:</h3>
+              <p>{{Scenario}}</p>
+            </div>
+            <div>
+              <b>{{Question}}</b><br>
+              <input type="text" id="scenario-answer-input" placeholder="Type your answer here" />
+            </div>
+            <button id="check-answer-btn" onclick="checkScenario()">Check Answer</button>
+            <div id="feedback"></div>
+          </div>
+
+          <script>
+            function checkScenario() {
+              const userAnswer = document.getElementById("scenario-answer-input").value.trim().toLowerCase();
+              const correctAnswer = "{{CorrectAnswer}}".trim().toLowerCase();
+              const feedback = document.getElementById('feedback');
+              if (userAnswer === correctAnswer) {
+                feedback.textContent = "Correct! Great job.";
+                feedback.style.color = "green";
+              } else {
+                feedback.textContent = "Incorrect. The correct answer is: " + "{{CorrectAnswer}}";
+                feedback.style.color = "red";
+              }
+            }
+          </script>
+        afmt: |
+          <b>Correct Answer:</b> {{CorrectAnswer}}
