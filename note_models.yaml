@@ -1,4 +1,4 @@
-inote_models:
+note_models:
   - name: "MultipleChoiceCard"
     fields:
       - name: "Question"
