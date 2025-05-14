@@ -1,322 +1,793 @@
-deck_name: "Cognition and Decision Making::Module 10::Lecture 11 - Explanation-Based Decisions"
+deck_name: "Cognition and Decision Making::Module 13::Group Decision Making"
 cards:
 
-##############################
-# 1-–12  MULTIPLE-CHOICE CARDS
-##############################
+# ────────────────────────────
+# 1-40  MULTIPLE-CHOICE
+# ────────────────────────────
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "The Condorcet Jury Theorem assumes that each voter’s choice is made:"
+    Option1: "Independently of others"
+    Option2: "By copying neighbours"
+    Option3: "Under leader instruction"
+    Option4: "With probability below 0.5"
+    CorrectAnswer: "Independently of others"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "Which domain IS NOT part of a ‘framework theory’ as discussed in this lecture?"
-      Option1: "Biology"
-      Option2: "Physics"
-      Option3: "Psychology"
-      Option4: "Sociology"
-      CorrectAnswer: "Sociology"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "According to Condorcet, if individual competence is 0.6, what happens to majority accuracy as jury size grows?"
+    Option1: "Falls toward 0.5"
+    Option2: "Approaches 1"
+    Option3: "Stays at 0.6"
+    Option4: "Becomes unpredictable"
+    CorrectAnswer: "Approaches 1"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "Elizabeth Spelke lists six innate systems of core knowledge. Which option is NOT among them?"
-      Option1: "Object motions"
-      Option2: "Agents"
-      Option3: "Forms and functions of living beings"
-      Option4: "Language syntax"
-      CorrectAnswer: "Language syntax"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Galton’s 1907 ox-weight contest illustrated that the _____ of many estimates can approximate the true value."
+    Option1: "Maximum"
+    Option2: "Median"
+    Option3: "Mode"
+    Option4: "Lowest quartile"
+    CorrectAnswer: "Median"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "Which term refers specifically to *learned expectations about routine events* such as ordering at a restaurant?"
-      Option1: "Framework knowledge"
-      Option2: "Schema"
-      Option3: "Script"
-      Option4: "Core knowledge system"
-      CorrectAnswer: "Script"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "On *Who Wants to Be a Millionaire?* U.S. data, the audience was correct about:"
+    Option1: "65 % of the time"
+    Option2: "91 % of the time"
+    Option3: "50 % of the time"
+    Option4: "25 % of the time"
+    CorrectAnswer: "91 % of the time"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "Bransford & Johnson (1973) showed comprehension and recall were lowest when participants lacked what crucial element?"
-      Option1: "Keyword list"
-      Option2: "Illustrations"
-      Option3: "Contextual title"
-      Option4: "Audio recording"
-      CorrectAnswer: "Contextual title"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Surowiecki’s three conditions for a *wise crowd* are aggregation, independence, and:"
+    Option1: "Risk aversion"
+    Option2: "Cognitive diversity"
+    Option3: "Time pressure"
+    Option4: "Uniform expertise"
+    CorrectAnswer: "Cognitive diversity"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "In Blackwell et al. (2007), which belief best characterizes an *entity theory* of intelligence?"
-      Option1: "\"You can always greatly change how intelligent you are.\""
-      Option2: "\"Intelligence is a fixed trait you can’t really change.\""
-      Option3: "\"Effort leads to mastery over time.\""
-      Option4: "\"Hard work feels like not being smart.\""
-      CorrectAnswer: "\"Intelligence is a fixed trait you can’t really change.\""
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "In class jelly-bean demos, crowd error shrank because extreme over- and under-estimates:"
+    Option1: "Were discarded"
+    Option2: "Cancelled each other"
+    Option3: "Became correlated"
+    Option4: "Raised the mean"
+    CorrectAnswer: "Cancelled each other"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "On Blackwell et al.’s 1-to-6 scale (1 = pure entity, 6 = pure incremental), what value represents *pure entity theory*?"
-      Option1: "1"
-      Option2: "3"
-      Option3: "4"
-      Option4: "6"
-      CorrectAnswer: "1"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Which experimental condition in Moshman & Geil (1998) produced ~70 % correct solutions to the Wason task?"
+    Option1: "Individuals working alone"
+    Option2: "Interactive groups only"
+    Option3: "Individual → group sequence"
+    Option4: "Computer simulation"
+    CorrectAnswer: "Interactive groups only"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "Damage to which brain region is associated with schema-related confabulation?"
-      Option1: "Ventromedial prefrontal cortex (vmPFC)"
-      Option2: "Dorsolateral prefrontal cortex (dlPFC)"
-      Option3: "Hippocampus"
-      Option4: "Amygdala"
-      CorrectAnswer: "Ventromedial prefrontal cortex (vmPFC)"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "In Moshman & Geil, groups with **no** initially correct member sometimes still solved the task by:"
+    Option1: "Voting"
+    Option2: "Mutual challenge of reasons"
+    Option3: "Consulting hints"
+    Option4: "Choosing at random"
+    CorrectAnswer: "Mutual challenge of reasons"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "In Ghosh et al. (2014) the confabulating patients were MAINLY impaired at:"
-      Option1: "Rejecting lure words from a previous schema"
-      Option2: "Generating vivid mental images"
-      Option3: "Measuring reaction speed"
-      Option4: "Reporting emotional valence"
-      CorrectAnswer: "Rejecting lure words from a previous schema"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Sniezek (1989) compared four group-decision techniques. Which yielded the *largest* error reduction?"
+    Option1: "Consensus"
+    Option2: "Dialectic"
+    Option3: "Dictator"
+    Option4: "Delphi"
+    CorrectAnswer: "Dictator"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "Which type of script violation is especially well remembered according to Bower, Black & Turner (1979)?"
-      Option1: "Errors"
-      Option2: "Obstacles and distractions"
-      Option3: "Routine actions"
-      Option4: "Order-consistent steps"
-      CorrectAnswer: "Obstacles and distractions"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Sniezek’s **Delphi** method achieved improvement by:"
+    Option1: "Face-to-face debate"
+    Option2: "Anonymised iterative estimates"
+    Option3: "Leader selection"
+    Option4: "Random averaging"
+    CorrectAnswer: "Anonymised iterative estimates"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "When Pennington & Hastie (1988) presented *prosecution evidence in temporal order* and *defense evidence scrambled*, what percentage of jurors returned a guilty verdict?"
-      Option1: "31 %"
-      Option2: "50 %"
-      Option3: "78 %"
-      Option4: "12 %"
-      CorrectAnswer: "78 %"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Groups sometimes under-perform because members choose similar others. This selection bias is called:"
+    Option1: "Anchoring"
+    Option2: "Homophily"
+    Option3: "Saliency"
+    Option4: "Primacy"
+    CorrectAnswer: "Homophily"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "Mulligan & Hastie (2005) found that presenting company information in chronological order caused investors to rely most heavily on which sentence category?"
-      Option1: "Context"
-      Option2: "Reaction"
-      Option3: "Outcome"
-      Option4: "Plan"
-      CorrectAnswer: "Outcome"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Morton Thiokol engineers warned against launching Challenger due to uncertainty about:"
+    Option1: "Fuel weight"
+    Option2: "O-ring performance in cold"
+    Option3: "Computer glitches"
+    Option4: "Wind shear"
+    CorrectAnswer: "O-ring performance in cold"
 
-  - model: "MultipleChoiceCard"
-    fields:
-      Question: "According to the cognitive consistency model (Simon, Snow & Read 2004), evidence evaluation is:"
-      Option1: "Unidirectional: evidence → conclusion"
-      Option2: "Bidirectional: evidence ↔ emerging conclusion"
-      Option3: "Random, with no coherence pressure"
-      Option4: "Predetermined by juror demographics"
-      CorrectAnswer: "Bidirectional: evidence ↔ emerging conclusion"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Irving Janis defined **groupthink** primarily as poor decisions caused by:"
+    Option1: "Information overload"
+    Option2: "Excessive striving for unanimity"
+    Option3: "Lack of expertise"
+    Option4: "Time constraints alone"
+    CorrectAnswer: "Excessive striving for unanimity"
 
-#########################
-# 13-–24  TRUE/FALSE CARDS
-#########################
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Which of the following is **not** one of Janis’s three broad symptom clusters?"
+    Option1: "Overestimation"
+    Option2: "Closed-mindedness"
+    Option3: "Uniformity pressures"
+    Option4: "Cognitive dissonance"
+    CorrectAnswer: "Cognitive dissonance"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "Framework knowledge is considered innate or intuitive, emerging early in development."
-      CorrectAnswer: "True"
-      Explanation: "Framework theories (biology, physics, psychology) arise early and guide interpretation of new information."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "A *mindguard* in groupthink terminology is a member who:"
+    Option1: "Collects external data"
+    Option2: "Blocks dissenting information"
+    Option3: "Facilitates brainstorming"
+    Option4: "Acts as time-keeper"
+    CorrectAnswer: "Blocks dissenting information"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "Scripts are learned exclusively through explicit instruction rather than observation."
-      CorrectAnswer: "False"
-      Explanation: "Scripts are picked up gradually through observation of routine events."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Leana’s (1985) laboratory test showed **directive leaders** increased defective decision symptoms regardless of:"
+    Option1: "Group size"
+    Option2: "Group cohesiveness"
+    Option3: "Task difficulty"
+    Option4: "Time available"
+    CorrectAnswer: "Group cohesiveness"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "Students endorsing an incremental theory attribute setbacks to insufficient effort and adapt strategies."
-      CorrectAnswer: "True"
-      Explanation: "Blackwell et al. showed incremental-theory students persevere after failures."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "In Leana’s layoff task, most directive-leader groups chose the simplistic criterion of:"
+    Option1: "Job performance"
+    Option2: "Seniority"
+    Option3: "Training cost"
+    Option4: "Random draw"
+    CorrectAnswer: "Seniority"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "In Bransford & Johnson’s balloon paragraph study, providing context AFTER reading produced the highest recall."
-      CorrectAnswer: "False"
-      Explanation: "Context had to be provided *before* reading to aid comprehension."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "The classic Asch conformity experiments asked participants to judge:"
+    Option1: "Moral dilemmas"
+    Option2: "Line lengths"
+    Option3: "Colour hues"
+    Option4: "Coin weights"
+    CorrectAnswer: "Line lengths"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "Chronological ordering of stock information reduced the impact of outcome sentences on investment decisions."
-      CorrectAnswer: "False"
-      Explanation: "Chronological order *increased* the weight given to outcome information."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Kramer (1998) argued that the Bay of Pigs invasion reflects *politico-think* because the dominant motive was:"
+    Option1: "Technical accuracy"
+    Option2: "Domestic political image"
+    Option3: "Time efficiency"
+    Option4: "Economic gain"
+    CorrectAnswer: "Domestic political image"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "The story model suggests jurors integrate evidence through weighted averaging without narrative construction."
-      CorrectAnswer: "False"
-      Explanation: "The simple weighted-average model was rejected; jurors build causal stories."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "According to Janis, **high stress** and **low hope of a better solution** belong to which set of groupthink antecedents?"
+    Option1: "Group"
+    Option2: "Organization"
+    Option3: "Situation"
+    Option4: "Individual"
+    CorrectAnswer: "Situation"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "Confabulating vmPFC-lesion patients confuse schemas such as a doctor's visit with going to a restaurant."
-      CorrectAnswer: "True"
-      Explanation: "They mis-reinstate inappropriate schemas, leading to false memories."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Which *group-reasoning* study extended findings to the Linda (conjunction) problem?"
+    Option1: "Moshman & Geil"
+    Option2: "Mercier & Claidière"
+    Option3: "Sniezek"
+    Option4: "Leana"
+    CorrectAnswer: "Mercier & Claidière"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "Simon, Snow & Read found that participants’ confidence remained low because the case was ambiguous."
-      CorrectAnswer: "False"
-      Explanation: "Participants showed *high* confidence despite ambiguous evidence."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "James Surowiecki emphasises that crowd wisdom collapses when members are:"
+    Option1: "Independent"
+    Option2: "Too homogeneous"
+    Option3: "Diverse"
+    Option4: "Numerous"
+    CorrectAnswer: "Too homogeneous"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "Jurors may privilege later evidence that fits an emerging narrative due to confirmation bias."
-      CorrectAnswer: "True"
-      Explanation: "Once a tentative story forms, disconfirming evidence is discounted."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "In Condorcet’s model, if each voter is worse than random (p<0.5), adding more voters will:"
+    Option1: "Fix the error"
+    Option2: "Worsen collective accuracy"
+    Option3: "Have no effect"
+    Option4: "Create cycles"
+    CorrectAnswer: "Worsen collective accuracy"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "In Pennington & Hastie (1986) about 45 % of story elements came from jurors’ inferences about mental states and goals."
-      CorrectAnswer: "True"
-      Explanation: "Think-aloud protocols revealed nearly half the narrative came from inference."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Galton interpreted the crowd’s accuracy as evidence for the trust-worthiness of:"
+    Option1: "Aristocracy"
+    Option2: "Democratic judgment"
+    Option3: "Animal intuition"
+    Option4: "Expert panels"
+    CorrectAnswer: "Democratic judgment"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "Effort beliefs such as 'working hard means I'm not smart' align with an incremental mindset."
-      CorrectAnswer: "False"
-      Explanation: "Such statements align with an entity mindset that devalues effort."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Which group-decision style in Sniezek relies on two members arguing opposite sides before consensus?"
+    Option1: "Consensus"
+    Option2: "Dialectic"
+    Option3: "Delphi"
+    Option4: "Dictator"
+    CorrectAnswer: "Dialectic"
 
-  - model: "TrueFalseCard"
-    fields:
-      Statement: "The cognitive consistency model predicts that acquitters will later rate innocence-supporting evidence more favorably."
-      CorrectAnswer: "True"
-      Explanation: "Post-decision ratings shift to cohere with the reached verdict."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Janis recommended appointing a *devil’s advocate* mainly to reduce which symptom cluster?"
+    Option1: "Overestimation"
+    Option2: "Uniformity pressure"
+    Option3: "Closed-mindedness"
+    Option4: "Time pressure"
+    CorrectAnswer: "Uniformity pressure"
 
-##################################
-# 25-–36  FILL-IN-THE-BLANK CARDS
-##################################
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Self-censorship in groupthink most directly suppresses:"
+    Option1: "Illusion of invulnerability"
+    Option2: "Open disagreement"
+    Option3: "Collective rationalisation"
+    Option4: "Stereotyping rivals"
+    CorrectAnswer: "Open disagreement"
 
-  - model: "FillInTheBlankCard"
-    fields:
-      SentenceWithBlank: "Blackwell et al. describe the ______ theory of intelligence as believing ability can improve through effort."
-      CorrectAnswer: "incremental"
-      Hint: "Opposite of entity"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "The *illusion of unanimity* may arise partly because members misinterpret others’ silence as:"
+    Option1: "Expertise"
+    Option2: "Agreement"
+    Option3: "Ignorance"
+    Option4: "Fear"
+    CorrectAnswer: "Agreement"
 
-  - model: "FillInTheBlankCard"
-    fields:
-      SentenceWithBlank: "Bransford & Johnson showed that providing a contextual ______ before reading aids comprehension."
-      CorrectAnswer: "title"
-      Hint: "One-word summary"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Aggregation mechanisms like prediction markets succeed mainly because they convert private beliefs into:"
+    Option1: "Manipulative ads"
+    Option2: "Public prices"
+    Option3: "Legal mandates"
+    Option4: "Direct votes"
+    CorrectAnswer: "Public prices"
 
-  - model: "FillInTheBlankCard"
-    fields:
-      SentenceWithBlank: "Damage to the ______ cortex is linked with schema-based confabulation."
-      CorrectAnswer: "ventromedial prefrontal"
-      Hint: "vmPFC"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Challenger engineers’ recommendation *not* to launch was overruled after which organisational pressure?"
+    Option1: "Time-window pressure"
+    Option2: "Stock-price fear"
+    Option3: "Weather forecast"
+    Option4: "Media leaks"
+    CorrectAnswer: "Time-window pressure"
 
-  - model: "FillInTheBlankCard"
-    fields:
-      SentenceWithBlank: "Presenting evidence in ______ order helps jurors build causal stories."
-      CorrectAnswer: "temporal"
-      Hint: "Chronological"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Sniezek found that groups often recognised their best forecaster, but the *dictator's* final answer drifted toward:"
+    Option1: "The worst member"
+    Option2: "The group mean"
+    Option3: "Random noise"
+    Option4: "External advice"
+    CorrectAnswer: "The group mean"
 
-  - model: "FillInTheBlankCard"
-    fields:
-      SentenceWithBlank: "Favoring information that confirms an emerging story exemplifies ______ bias."
-      CorrectAnswer: "confirmation"
-      Hint: "Classic cognitive bias"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Which Janis symptom involves dismissing warnings contrary to group assumptions?"
+    Option1: "Rationalisation"
+    Option2: "Mindguards"
+    Option3: "Self-censorship"
+    Option4: "Moral superiority"
+    CorrectAnswer: "Rationalisation"
 
-  - model: "FillInTheBlankCard"
-    fields:
-      SentenceWithBlank: "According to Spelke, knowledge of 'agents' belongs to the set of six systems of ______ knowledge."
-      CorrectAnswer: "core"
-      Hint: "Opposite of peripheral"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Janis pointed to the Marshall Plan as a *successful* case because advisers used:"
+    Option1: "Directed leadership"
+    Option2: "Structured debate"
+    Option3: "Strict secrecy"
+    Option4: "Voting shortcuts"
+    CorrectAnswer: "Structured debate"
 
-  - model: "FillInTheBlankCard"
-    fields:
-      SentenceWithBlank: "Pennington & Hastie’s narrative explanation of juror reasoning is called the ______ model."
-      CorrectAnswer: "story"
-      Hint: "Another word for narrative"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "In Moshman & Geil, individuals who originally answered *incorrectly* but later gave correct group explanations illustrate:"
+    Option1: "Social loafing"
+    Option2: "Persuasion through reasons"
+    Option3: "Minority tyranny"
+    Option4: "Information cascades"
+    CorrectAnswer: "Persuasion through reasons"
 
-  - model: "FillInTheBlankCard"
-    fields:
-      SentenceWithBlank: "The sense of high decision certainty in complex cases is attributed to perceived ______ in the reconstructed evidence."
-      CorrectAnswer: "coherence"
-      Hint: "Logical fit"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Homophily undermines crowd wisdom primarily by reducing which of Surowiecki’s conditions?"
+    Option1: "Aggregation"
+    Option2: "Diversity"
+    Option3: "Independence"
+    Option4: "Group size"
+    CorrectAnswer: "Diversity"
 
-################################
-# 37-–38  MATCHING-PAIR CARDS
-################################
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Directive leadership can push a group toward quick consensus at the expense of:"
+    Option1: "Speed"
+    Option2: "Decision quality"
+    Option3: "Role clarity"
+    Option4: "Unity"
+    CorrectAnswer: "Decision quality"
 
-  - model: "MatchingCard"
-    fields:
-      Concept1: "Framework Theory"
-      Concept2: "Schema"
-      Concept3: "Script"
-      Concept4: "Story Model"
-      Definition1: "Innate, intuitive background knowledge (e.g., physics, biology, psychology)."
-      Definition2: "General learned expectations guiding comprehension of new situations."
-      Definition3: "Routine-event knowledge (e.g., grocery-shopping steps)."
-      Definition4: "Juror narrative linking events, motives, and outcomes to reach a verdict."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "The Asch paradigm demonstrates *normative influence* because many participants conformed despite:"
+    Option1: "Believing the group was correct"
+    Option2: "Knowing the group was wrong"
+    Option3: "Lacking visual acuity"
+    Option4: "Rewards for accuracy"
+    CorrectAnswer: "Knowing the group was wrong"
 
-  - model: "MatchingCard"
-    fields:
-      Concept1: "Entity Theory"
-      Concept2: "Incremental Theory"
-      Concept3: "Obstacle Violation"
-      Concept4: "Confirmation Bias"
-      Definition1: "Belief that intelligence is fixed and unchangeable."
-      Definition2: "Belief that intelligence can grow with effort."
-      Definition3: "Barrier preventing a routine script from unfolding normally."
-      Definition4: "Tendency to favor evidence that supports existing beliefs."
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "A recommended anti-groupthink practice is to allow meetings where the formal leader is:"
+    Option1: "Highly vocal"
+    Option2: "Absent or speaks last"
+    Option3: "Assigns tasks"
+    Option4: "Presents solutions first"
+    CorrectAnswer: "Absent or speaks last"
 
-#####################################
-# 39-–44  SCENARIO-BASED CHALLENGES
-#####################################
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Crowd wisdom fails when member errors are perfectly correlated because _____ cannot cancel."
+    Option1: "Random noise"
+    Option2: "Systematic bias"
+    Option3: "Sample size effects"
+    Option4: "Averaging math"
+    CorrectAnswer: "Systematic bias"
 
-  - model: "ScenarioCard"
-    fields:
-      Scenario: |
-        A jury hears evidence presented in the following sequence:
-        • Morning events   • Autopsy report   • Fight at bar (chronologically later)
-        The prosecution arranged this *scrambled* order, while the defense evidence followed the fight chronologically.
-      Question: "Based on Pennington & Hastie (1988), is a guilty verdict more or less likely than if the prosecution had used chronological order?"
-      CorrectAnswer: "Less likely"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "Collective rationalisation, a groupthink symptom, leads teams to reinterpret warning signs so they:"
+    Option1: "Support prior beliefs"
+    Option2: "Signal danger"
+    Option3: "Remain ambiguous"
+    Option4: "Call for delay"
+    CorrectAnswer: "Support prior beliefs"
 
-  - model: "ScenarioCard"
-    fields:
-      Scenario: |
-        Two seventh-grade students both fail a math quiz.
-        Student A thinks, “I’m just not a math person.”
-        Student B thinks, “I need a different study strategy.”
-      Question: "Which student endorses the incremental theory of intelligence?"
-      CorrectAnswer: "Student B"
+- model: "MultipleChoiceCard"
+  fields:
+    Question: "The *Delphi* technique avoids conformity pressures mainly by eliminating:"
+    Option1: "Leader influence"
+    Option2: "Face-to-face interaction"
+    Option3: "Anonymous feedback"
+    Option4: "Iteration"
+    CorrectAnswer: "Face-to-face interaction"
 
-  - model: "ScenarioCard"
-    fields:
-      Scenario: |
-        During a doctor-office visit, a vmPFC-lesion patient later claims they ordered food,
-        recalling silverware and a waiter. No such events occurred.
-      Question: "What cognitive symptom does this illustrate?"
-      CorrectAnswer: "Confabulation due to schema mis-reinstatement"
+# ────────────────────────────
+# 41-70  TRUE / FALSE
+# ────────────────────────────
+- model: "TrueFalseCard"
+  fields:
+    Statement: "If each voter is 51 % accurate and independent, a 101-person jury is almost certain to reach the correct decision under Condorcet’s theorem."
+    CorrectAnswer: "True"
+    Explanation: "Majority accuracy rises rapidly above 0.5 competence."
 
-  - model: "ScenarioCard"
-    fields:
-      Scenario: |
-        An investor reads six sentences about a tech start-up in strict chronological order.
-        The final sentence reports the product launch failed.
-      Question: "According to Mulligan & Hastie, will this outcome sentence strongly influence the investor’s decision?"
-      CorrectAnswer: "Yes"
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Galton mistakenly concluded that the *mean* crowd estimate was worse than the median."
+    CorrectAnswer: "False"
+    Explanation: "The mean (1 197 lb) was actually closest to truth."
 
-  - model: "ScenarioCard"
-    fields:
-      Scenario: |
-        Before a trial, mock jurors rate eyewitness identifications as moderately reliable.
-        After reaching a guilty verdict, they rate the SAME identification as highly reliable.
-      Question: "Which model of evidence processing explains this shift?"
-      CorrectAnswer: "Cognitive consistency model"
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Wisdom-of-crowds effects require that individual errors be uncorrelated."
+    CorrectAnswer: "True"
+    Explanation: "Correlation prevents cancellation."
 
-  - model: "ScenarioCard"
-    fields:
-      Scenario: |
-        While watching trial testimony, a juror builds a narrative:
-        (1) Defendant insulted in bar ➜ (2) Felt angry ➜ (3) Decided to retaliate ➜ (4) Used knife ➜ (5) Victim died.
-      Question: "This causal chain exemplifies which decision-making account?"
-      CorrectAnswer: "Story model"
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Homophily can create correlated errors that undermine crowd accuracy."
+    CorrectAnswer: "True"
+    Explanation: "Similar people share biases."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Moshman & Geil found that writing an explanation individually *after* group consensus retained most of the group’s accuracy."
+    CorrectAnswer: "True"
+    Explanation: "Individuals could reproduce reasoning."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "In Sniezek’s study, the consensus method outperformed the best individual forecaster."
+    CorrectAnswer: "False"
+    Explanation: "Best member still beat consensus."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "The dialectic method explicitly forces consideration of why estimates could be too high or too low."
+    CorrectAnswer: "True"
+    Explanation: "Opposing reasons are generated."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Janis argued that a highly cohesive group is always at risk of groupthink, regardless of leadership style."
+    CorrectAnswer: "False"
+    Explanation: "Cohesion is one risk factor, but structure & situation matter."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Directive leadership can produce groupthink even in newly formed, low-cohesion groups."
+    CorrectAnswer: "True"
+    Explanation: "Leana’s data support this."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Self-appointed mindguards attempt to expose the group to disconfirming evidence."
+    CorrectAnswer: "False"
+    Explanation: "They shield the group from it."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "The illusion of invulnerability makes groups overly optimistic and more likely to accept risky options."
+    CorrectAnswer: "True"
+    Explanation: "They believe failure is impossible."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Leana found that participative leaders increased alternative generation compared with directive leaders."
+    CorrectAnswer: "True"
+    Explanation: "More ideas were discussed."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "According to Janis, stereotypes of out-groups can reinforce closed-mindedness."
+    CorrectAnswer: "True"
+    Explanation: "Opponents seen as evil or stupid."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Kramer suggested that Kennedy’s Bay of Pigs decision was driven by desire for domestic approval – an external motive."
+    CorrectAnswer: "True"
+    Explanation: "Thus, politico-think."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "In Condorcet’s framework, dependence between voters can reverse the theorem’s accuracy guarantee."
+    CorrectAnswer: "True"
+    Explanation: "Independence is critical."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Surowiecki’s independence condition is automatically satisfied in online social networks."
+    CorrectAnswer: "False"
+    Explanation: "Social influence often links users."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Mindguards operate by pressuring dissenters directly."
+    CorrectAnswer: "False"
+    Explanation: "They filter info before it reaches group."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "In Leana’s non-cohesive groups, information sharing about unique role data was worse than in cohesive groups."
+    CorrectAnswer: "True"
+    Explanation: "Cohesion improved sharing."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "The Delphi method prevents dominance by a single vocal member."
+    CorrectAnswer: "True"
+    Explanation: "Anonymity and rounds dilute dominance."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Sniezek found that dictators sometimes shifted toward the collective mean, increasing error."
+    CorrectAnswer: "True"
+    Explanation: "Social influence pulled estimate."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Janis recommended bringing in external experts to widen the range of alternatives considered."
+    CorrectAnswer: "True"
+    Explanation: "Counteracts insularity."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Asch participants conformed mainly because they truly believed the group answer."
+    CorrectAnswer: "False"
+    Explanation: "Most conformed normatively."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Uniformity pressures include both direct persuasion and subtle cues like silence."
+    CorrectAnswer: "True"
+    Explanation: "Members infer consensus."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "In the Challenger case, data on O-ring temperature performance was extrapolated beyond tested range."
+    CorrectAnswer: "True"
+    Explanation: "No data below 40 °F."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "The wisdom-of-crowds phenomenon applies only to quantitative estimation, not to yes/no decisions."
+    CorrectAnswer: "False"
+    Explanation: "Condorcet applies to binary choices."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Directive leaders emphasised consensus over quality in Leana’s experimental instructions."
+    CorrectAnswer: "True"
+    Explanation: "Participants told to agree quickly."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Crowdsourcing exploits Surowiecki’s principles by aggregating many independent contributions."
+    CorrectAnswer: "True"
+    Explanation: "Large, diverse, independent input."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Mindguards can exist even without explicit orders from the leader."
+    CorrectAnswer: "True"
+    Explanation: "Members self-appoint."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "Groupthink’s *moral superiority* symptom leads members to dismiss ethical concerns."
+    CorrectAnswer: "True"
+    Explanation: "Inherent morality of group."
+
+- model: "TrueFalseCard"
+  fields:
+    Statement: "The Condorcet theorem supports using a single expert rather than a random large group when expert accuracy is 0.6."
+    CorrectAnswer: "False"
+    Explanation: "Majority of many 0.6 voters beats one expert."
+
+# ────────────────────────────
+# 71-90  FILL-IN-THE-BLANK
+# ────────────────────────────
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "James Surowiecki’s book is titled *The ________ of Crowds*."
+    CorrectAnswer: "Wisdom"
+    Hint: "opposite of folly"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Independence, diversity, and aggregation are Surowiecki’s ________ for crowd accuracy."
+    CorrectAnswer: "conditions"
+    Hint: "requirements"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "A group member who filters out adverse data acts as a ________."
+    CorrectAnswer: "mindguard"
+    Hint: "two-word concept merged"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Janis connected *self-censorship* directly to the illusion of ________."
+    CorrectAnswer: "unanimity"
+    Hint: "everyone agrees"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Sniezek’s *dictator* technique relies on selecting the group’s perceived ________ member."
+    CorrectAnswer: "best"
+    Hint: "top"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "When average individual accuracy < 0.5, Condorcet predicts the majority rule becomes ________ than chance."
+    CorrectAnswer: "worse"
+    Hint: "opposite of better"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "The Asch experiment revealed strong ________ influence on judgments."
+    CorrectAnswer: "normative"
+    Hint: "social pressure-based"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Groups chosen by similarity of backgrounds risk losing *cognitive* ________."
+    CorrectAnswer: "diversity"
+    Hint: "variety"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Janis highlighted *illusion of ________* as overestimating immunity to failure."
+    CorrectAnswer: "invulnerability"
+    Hint: "cannot be hurt"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Leana found that *participative* leaders increased the number of alternative ________ generated."
+    CorrectAnswer: "solutions"
+    Hint: "proposals"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "In the jelly-bean demo, the group mean was closer to the true count because high and low errors ________."
+    CorrectAnswer: "offset"
+    Hint: "cancel"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Janis’s structural faults include insulation from ________ information."
+    CorrectAnswer: "outside"
+    Hint: "external"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "The Delphi technique collects estimates in successive anonymous ________."
+    CorrectAnswer: "rounds"
+    Hint: "iterations"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Homophily literally means love of the ________."
+    CorrectAnswer: "same"
+    Hint: "opposite of different"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "A group’s tendency to perceive rivals as too evil to negotiate is called ________ of out-groups."
+    CorrectAnswer: "stereotyping"
+    Hint: "generalising"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "When the best member’s judgment is averaged with less accurate inputs, error can ________."
+    CorrectAnswer: "increase"
+    Hint: "rise"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Directive leaders in Leana’s study emphasised ________ over quality."
+    CorrectAnswer: "consensus"
+    Hint: "agreement"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Overconfidence based on group membership is part of Janis’s *illusion of ________ morality*."
+    CorrectAnswer: "inherent"
+    Hint: "built-in"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Galton’s ox contest had ________ competitors paying to guess the weight."
+    CorrectAnswer: "800"
+    Hint: "three digits"
+
+- model: "FillInTheBlankCard"
+  fields:
+    SentenceWithBlank: "Asch showed that a single ally reduces conformity dramatically, illustrating the power of ________."
+    CorrectAnswer: "dissent"
+    Hint: "disagreement"
+
+# ────────────────────────────
+# 91-100  MATCHING
+# ────────────────────────────
+- model: "MatchingCard"
+  fields:
+    Concept1: "Aggregation"
+    Concept2: "Independence"
+    Concept3: "Diversity"
+    Concept4: "Homophily"
+    Definition1: "Mechanism for turning private judgments into a collective output."
+    Definition2: "Each opinion formed without social influence."
+    Definition3: "Different perspectives and knowledge bases."
+    Definition4: "Preference for similar others that threatens #3."
+
+- model: "MatchingCard"
+  fields:
+    Concept1: "Consensus Method"
+    Concept2: "Dictator Method"
+    Concept3: "Dialectic Method"
+    Concept4: "Delphi Method"
+    Definition1: "Group openly discusses until everyone agrees."
+    Definition2: "Best member’s estimate becomes group answer."
+    Definition3: "Members argue both higher and lower possibilities."
+    Definition4: "Anonymous, iterative estimates without discussion."
+
+- model: "MatchingCard"
+  fields:
+    Concept1: "Overestimation"
+    Concept2: "Closed-mindedness"
+    Concept3: "Uniformity Pressure"
+    Concept4: "Mindguard"
+    Definition1: "Illusion of invulnerability and moral superiority."
+    Definition2: "Rationalising warnings; stereotyping enemies."
+    Definition3: "Self-censoring doubts; illusion of unanimity."
+    Definition4: "Member shielding group from contrary data."
+
+- model: "MatchingCard"
+  fields:
+    Concept1: "Illusion of Invulnerability"
+    Concept2: "Collective Rationalisation"
+    Concept3: "Self-Censorship"
+    Concept4: "Stereotyping Rivals"
+    Definition1: "Group believes nothing can go wrong."
+    Definition2: "Discounting red flags to fit prior plan."
+    Definition3: "Members silence their misgivings."
+    Definition4: "Opponents viewed as too evil or dumb."
+
+- model: "MatchingCard"
+  fields:
+    Concept1: "Asch Study"
+    Concept2: "Challenger Launch"
+    Concept3: "Bay of Pigs"
+    Concept4: "Marshall Plan"
+    Definition1: "Classic conformity line-length experiment."
+    Definition2: "Decision overruling engineer caution about cold."
+    Definition3: "Failed invasion illustrating politico-think."
+    Definition4: "Post-war aid example of successful decision process."
+
+- model: "MatchingCard"
+  fields:
+    Concept1: "Directive Leader"
+    Concept2: "Participative Leader"
+    Concept3: "Cohesive Group"
+    Concept4: "Non-cohesive Group"
+    Definition1: "States opinion quickly; discourages alternatives."
+    Definition2: "Encourages input; withholds own view."
+    Definition3: "Members value affiliation; long history."
+    Definition4: "Members newly assembled; weak ties."
+
+- model: "MatchingCard"
+  fields:
+    Concept1: "Wisdom of Crowds"
+    Concept2: "Condorcet Jury"
+    Concept3: "Groupthink"
+    Concept4: "Politico-think"
+    Definition1: "Accuracy emerging from large, diverse, independent estimates."
+    Definition2: "Majority correctness increases with voter competence >0.5."
+    Definition3: "Faulty decisions caused by drive for unanimity."
+    Definition4: "Decisions distorted by external political motives."
+
+- model: "MatchingCard"
+  fields:
+    Concept1: "Devil’s Advocate"
+    Concept2: "Outside Expert"
+    Concept3: "Second-Chance Meeting"
+    Concept4: "Leader Absence"
+    Definition1: "Member officially tasked to critique plan."
+    Definition2: "Brings fresh perspective & information."
+    Definition3: "Reconsider decision after cooling-off period."
+    Definition4: "Reduces conformity to hierarchy."
+
+- model: "MatchingCard"
+  fields:
+    Concept1: "Bracketing"
+    Concept2: "Error Cancellation"
+    Concept3: "Systematic Bias"
+    Concept4: "Random Noise"
+    Definition1: "True value lies between extreme low/high guesses."
+    Definition2: "High and low errors offset in averaging."
+    Definition3: "Shared directional error across individuals."
+    Definition4: "Independent fluctuation around truth."
+
+- model: "MatchingCard"
+  fields:
+    Concept1: "Illusion of Unanimity"
+    Concept2: "Pressure on Dissenters"
+    Concept3: "Moral Superiority"
+    Concept4: "Information Insularity"
+    Definition1: "Silence taken as full agreement."
+    Definition2: "Direct attempts to silence opposing voices."
+    Definition3: "Belief that group ethics are beyond question."
+    Definition4: "Lack of channels for external inputs."

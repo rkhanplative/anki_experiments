@@ -269,6 +269,15 @@ note_models:
           <div id="feedback" style="margin-top: 10px;"></div>
 
           <script>
+            function shuffleItems() {
+              const container = document.getElementById('concepts');
+              const items = Array.from(container.children);
+              items.sort(() => Math.random() - 0.5);
+              items.forEach(item => container.appendChild(item));
+            }
+
+            document.addEventListener('DOMContentLoaded', shuffleItems);
+
             document.querySelectorAll('.drag-item').forEach(item => {
               item.addEventListener('dragstart', event => {
                 event.dataTransfer.setData('text', event.target.id);
@@ -352,6 +361,7 @@ note_models:
               
               const feedback = document.getElementById('feedback');
               feedback.textContent = "";
+              shuffleItems();
             }
           </script>
         afmt: |
